@@ -1,0 +1,19 @@
+name: loverchat
+version: '1.0'
+summary: lovethemchatapp
+description: |
+  provide lovers chat themes.
+confinement: devmode
+base: core18
+
+parts:
+  loverschat:
+    plugin: python
+    python-version: python2
+    source: https://github.com/johnmulama/loverchat.git
+    stage-packages:
+      - python-six
+
+apps:
+  loverschat:
+    command: bin/offlineimap
